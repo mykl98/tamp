@@ -64,7 +64,7 @@ cd ~/tamp && cp -f start-sshd.sh ~/.termux/boot/
 chmod +x ~/.termux/boot/start-sshd.sh
 ~/.termux/boot/start-sshd.sh
 
-pkg install expect
+pkg install expect -y
 chmod +x setpasswd.exp
 ./setpasswd.exp
 
