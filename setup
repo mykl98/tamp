@@ -53,8 +53,8 @@ fi
 
 pkg install phpmyadmin -y
 
-#cd ~/tamp && cp -f config.inc.php /sdcard/htdocs/phpmyadmin/config.inc.php
 cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
+cp -rf /dmdtech_offline_v3/* ~/storage/shared/htdocs
 
 pkg install openssh -y
 sshd
