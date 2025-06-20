@@ -68,8 +68,6 @@ pkg install expect -y
 chmod +x setpasswd.exp
 ./setpasswd.exp
 
-passwd
-
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 echo "TAMP installed sucessfully."
