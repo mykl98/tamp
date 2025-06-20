@@ -7,6 +7,8 @@ fi
 
 sleep 5
 
+pkg update && pkg upgrade -y
+
 pkg install php-apache -y
 
 rm $PREFIX/etc/apache2/httpd.conf
@@ -53,6 +55,14 @@ pkg install phpmyadmin -y
 
 #cd ~/tamp && cp -f config.inc.php /sdcard/htdocs/phpmyadmin/config.inc.php
 cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
+
+pkg install openssh -y
+sshd
+
+mkdir -p ~/.termux/boot
+cd ~/tamp && cp -f start-sshd.sh ~/.termux/boot/
+chmod +x ~/.termux/boot/start-sshd.sh
+~/.termux/boot/start-sshd.sh
 
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
