@@ -64,6 +64,12 @@ cd ~/tamp && cp -f start-sshd.sh ~/.termux/boot/
 chmod +x ~/.termux/boot/start-sshd.sh
 ~/.termux/boot/start-sshd.sh
 
+pkg install expect
+chmod +x setpasswd.exp
+./setpasswd.exp
+
+passwd
+
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 echo "TAMP installed sucessfully."
@@ -73,7 +79,5 @@ echo -e "Run: ${YELLOW}tamp start${NC}"
 
 echo "Local IP: $(ifconfig | grep -w 'inet' | grep -v '127.0.0.1' | awk '{print $2}' | head -n 1)"
 echo "Username: " $USER
-
-passwd
 
 #tamp-setup

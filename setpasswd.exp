@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+
+set password "Skooltech@123456"
+
+spawn passwd
+expect "New password:"
+send "$password\r"
+expect "Retype new password:"
+send "$password\r"
+expect eof
