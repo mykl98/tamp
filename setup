@@ -71,8 +71,7 @@ echo "/sdcard/htdocs - is your document directory."
 echo "Place your files in /sdcard/htdocs"
 echo -e "Run: ${YELLOW}tamp start${NC}"
 
-echo ip addr show wlan0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1
-
+ifconfig
 echo "Username: " $USER
 
 #tamp-setup
