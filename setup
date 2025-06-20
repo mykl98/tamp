@@ -68,6 +68,10 @@ pkg install expect -y
 chmod +x setpasswd.exp
 ./setpasswd.exp
 
+mysqld_safe &
+chmod +x mysql_secure_installation.exp
+./mysql_secure_installation.exp
+
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 echo "TAMP installed sucessfully."
@@ -77,7 +81,5 @@ echo -e "Run: ${YELLOW}tamp start${NC}"
 
 echo "Local IP: $(ifconfig | grep -w 'inet' | grep -v '127.0.0.1' | awk '{print $2}' | head -n 1)"
 echo "Username: " $USER
-
-mysql_secure_installation
 
 #tamp-setup
