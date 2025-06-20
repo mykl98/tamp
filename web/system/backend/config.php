@@ -1,40 +1,10 @@
 <?php
-if($_SERVER['SERVER_ADDR'] == '127.0.0.1' || $_SERVER['SERVER_ADDR'] == '::1' || $_SERVER['SERVER_ADDR'] == "localhost"){
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "dmdtech-offline-v3";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	$baseUrl = "http://localhost/dmdtech_offline_v3";
-}else if($_SERVER['SERVER_ADDR'] == '192.168.0.100'){
-	$servername = "127.0.0.1";
-	$username = "root";
-	$password = "Skooltech@123456";
-	$dbname = "dmdtech-offline-v3";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	$baseUrl = "http://".$_SERVER['SERVER_ADDR'];
-}else if($_SERVER['SERVER_ADDR'] == '192.168.1.107'){
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "dmdtech-offline-v3";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	$baseUrl = "http://".$_SERVER['SERVER_ADDR'] . "/lyntech_offline";
-}else if($_SERVER['SERVER_ADDR'] == '192.168.1.124'){
-	$servername = "127.0.0.1";
-	$username = "root";
-	$password = "Skooltech@123456";
-	$dbname = "dmdtech-offline-v3";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	$baseUrl = "http://".$_SERVER['SERVER_ADDR'] . ":8080";
-}else{
-	$servername = "localhost";
-	$username = "u528264240_dmdtech";
-	$password = "Skooltech@123456";
-	$dbname = "u528264240_dmdtech";
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	$baseUrl = "https://dmdtech.raptorapps.xyz";
-}
+$servername = "127.0.0.1";
+$username = "root";
+$password = "Skooltech@123456";
+$dbname = "dmdtech-offline-v3";
+$conn = new mysqli($servername, $username, $password, $dbname);
+$baseUrl = "http://".$_SERVER['SERVER_ADDR'] . ":8080";
 
 $brand = "DMDTech Solutions";
 $brandColor = "#000000";
