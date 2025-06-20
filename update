@@ -1,0 +1,34 @@
+#!$PREFIX/bin/bash
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+apachectl stop
+
+pgrep mariadb && pkill mariadb
+
+echo "${BLUE}Updating TAMP..${NC}"
+
+rm $PREFIX/etc/apache2/httpd.conf
+
+cp httpd.conf $PREFIX/etc/apache2/
+
+rm $PREFIX/etc/apache2/extra/httpd-ssl.conf
+
+cp httpd-ssl.conf $PREFIX/etc/apache2/extra/
+
+rm $PREFIX/bin/tamp
+
+chmod +x tamp
+
+cp tamp $PREFIX/bin/
+
+cp -n .htaccess /sdcard/htdocs/
+
+cp -n config.inc.php /sdcard/htdocs/phpmyadmin/config.inc.php
+
+echo "${RED}Done!${NC}"
+echo "${YELLOW}TAMP is up to date.${NC}"
+
+#tamp-update
