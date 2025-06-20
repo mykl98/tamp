@@ -59,6 +59,8 @@ cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
 pkg install openssh -y
 sshd
 
+pkg install iproute2
+
 mkdir -p ~/.termux/boot
 cd ~/tamp && cp -f start-sshd.sh ~/.termux/boot/
 chmod +x ~/.termux/boot/start-sshd.sh
