@@ -60,14 +60,6 @@ cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
 pkg install openssh -y
 sshd
 
-#install ntp server
-pkg install chrony -y
-cd ~/tamp
-cp -rf chrony.conf $PREFIX/etc/chrony
-
-sysctl restart chrony
-sysctl enable chrony
-
 mkdir -p ~/.termux/boot
 cd ~/tamp && cp -f start-sshd.sh ~/.termux/boot/
 chmod +x ~/.termux/boot/start-sshd.sh
