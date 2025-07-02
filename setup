@@ -55,6 +55,8 @@ pkg install phpmyadmin -y
 
 cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
 
+cd ~/tamp && cp -f php.ini $PREFIX/etc/php
+
 #cd ~/tamp && cp -rf web/. ~/storage/shared/htdocs
 
 pkg install openssh -y
