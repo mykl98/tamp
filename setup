@@ -54,7 +54,7 @@ fi
 pkg install phpmyadmin -y
 
 cd ~/tamp && cp -f config.inc.php $PREFIX/share/phpmyadmin
-
+mkdir $PREFIX/etc/php
 cd ~/tamp && cp -f php.ini $PREFIX/etc/php
 
 #cd ~/tamp && cp -rf web/. ~/storage/shared/htdocs
@@ -86,3 +86,5 @@ echo "Local IP: $(ifconfig | grep -w 'inet' | grep -v '127.0.0.1' | awk '{print 
 echo "Username: " whoami
 
 #tamp-setup
+
+
