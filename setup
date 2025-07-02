@@ -81,7 +81,7 @@ echo "Place your files in /sdcard/htdocs"
 echo -e "Run: ${YELLOW}tamp start${NC}"
 
 echo "Local IP: $(ifconfig | grep -w 'inet' | grep -v '127.0.0.1' | awk '{print $2}' | head -n 1)"
-echo "Username: " whoami
+echo "Username: $(whoami)"
 
 #tamp-setup
 
