@@ -31,7 +31,7 @@ $cfg['Servers'][$i]['host'] = '127.0.0.1';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 $cfg['ExecTimeLimit'] = 600;
-$cfg['MaxSize'] = 256 * 1024 * 1024; 
+$cfg['MaxSize'] = 256 * 1025 * 1024 * 1024; 
 
 /**
  * phpMyAdmin configuration storage settings.
